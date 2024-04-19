@@ -12,7 +12,7 @@ function RoutesApp() {
             <Route path='/admin' element={<Dashboard/>}/>
         </Route>
         <Route path='/' element={<Guest_Layout/>}>
-            <Route path='/admin' element={<SingleProduct/>}/>
+            <Route path='/singleproduct' element={<SingleProduct/>}/>
         </Route>
     </Routes>
   )
