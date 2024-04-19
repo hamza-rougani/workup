@@ -1,0 +1,21 @@
+import React from 'react'
+import {Routes,Route} from 'react-router-dom'
+import Admin_Layout from './Layouts/Admin_Layout'
+import Dashboard from './Views/Admin/Dashboard'
+import Guest_Layout from './Layouts/Guest_Layout'
+import SingleProduct from './Views/ProductPage/SingleProduct'
+import ReactGa from 'react-ga'
+function RoutesApp() {
+  return (
+    <Routes>
+        <Route path='/' element={<Admin_Layout/>}>
+            <Route path='/admin' element={<Dashboard/>}/>
+        </Route>
+        <Route path='/' element={<Guest_Layout/>}>
+            <Route path='/admin' element={<SingleProduct/>}/>
+        </Route>
+    </Routes>
+  )
+}
+
+export default RoutesApp
