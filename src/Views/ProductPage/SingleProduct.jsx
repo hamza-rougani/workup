@@ -1,11 +1,12 @@
 import { useEffect } from 'preact/hooks'
+import { useLocation } from 'react-router-dom';
 import React from 'react'
-import ReactGa from 'react-ga'
+import ReactGA from 'react-ga'
 
 function SingleProduct() {
-    useEffect(()=>{
-ReactGa.pageview(window.location.pathname)
-    },[])
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname + window.location.search);
+      }, []);
   return (
     <div>
   welcome to single product
