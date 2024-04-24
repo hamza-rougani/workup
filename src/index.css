@@ -1993,17 +1993,18 @@ display: none;
   .Homepage .Guides ul{
 
     grid-template-columns: repeat(1,1fr);
-
+   padding: 0;
     }
     .Homepage .Guides ul #li{
-
+    align-items: center;
       border-bottom:1px solid #908b8b7c;
       border-right:none;
+      
       
       }
     .Homepage .Guides ul li{
       justify-content: start;
-      padding:10px 20px;
+      padding:10px 34px;
       
     }
     .Footer  ul{
