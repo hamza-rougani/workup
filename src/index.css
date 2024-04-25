@@ -2140,6 +2140,9 @@ display: none;
      .ContainerBlogs .SideBlog .searchblog{
       display: none;
      }
+     .ContainerBlogs .SideBlog .aboutbloger{
+      gap: 10px;
+     }
 
      .Contact{
       padding: 20px 20px;
