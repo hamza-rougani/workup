@@ -27,6 +27,9 @@ function Header() {
     const handelSlideMenu = ()=>{
         document.body.classList.add('SlideMenuac')
     }
+    const handelSlideSearch = ()=>{
+        document.body.classList.add('SlideSearchAc')
+    }
   
     
   return (
@@ -52,7 +55,7 @@ function Header() {
           {searchvalue.length>0 ? <Search/> : ''}  
         </div>
         <ul className='ul'>
-            <li className='li s mobilevisible'><i class='bx bx-search-alt-2' ></i></li>
+            <li onClick={()=>{handelSlideSearch()}} className='li s mobilevisible'><i class='bx bx-search-alt-2' ></i></li>
             <li onClick={()=>handelShopping()}  className='li s ss'><i class='bx bx-shopping-bag'></i></li>
             <li className='lan'>
             <i class='bx bx-globe'></i>

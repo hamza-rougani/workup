@@ -8,6 +8,7 @@ import { useEffect, useRef } from 'preact/hooks'
 import Subscribe from '../Views/Homepage/Subscribe'
 import ScrollUp from '../Components/ScrollUp'
 import SlideMenu from '../Components/SlideMenu'
+import SlideSearch from '../Components/SlideSearch'
 
 function Guest_Layout() {
 
@@ -20,6 +21,7 @@ function Guest_Layout() {
         <Subscribe/>
         <ScrollUp/>
         <SlideMenu/>
+        <SlideSearch/>
         <Footer/>
     </div>
   )
