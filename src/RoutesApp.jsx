@@ -10,13 +10,15 @@ import Createproduct from './Views/Admin/Ecommerce/Products/Createproduct'
 import Homepage from './Views/Homepage/Homepage'
 import ContainerBlogs from './Views/Blogs/ContainerBlogs'
 import Contact from './Views/Contact/Contact'
-// import Scrolltop from './Components/Scrolltop'
+import Scrolltop from './Components/Scrolltop'
 const trackingCode = 'G-28WQ3FGMYE'
 ReactGa.initialize(trackingCode)
 function RoutesApp() {
   return (
+    <>
+    <Scrolltop />
+   
     <Routes>
-      {/* <Scrolltop /> */}
       {/* space of guest */}
       <Route path='/' element={<Guest_Layout/>}>
             <Route path='/' element={<Homepage/>}/>
@@ -32,6 +34,7 @@ function RoutesApp() {
         </Route>
         {/* space of admin */}
     </Routes>
+    </>
   )
 }
 
