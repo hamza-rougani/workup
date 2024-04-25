@@ -2,7 +2,7 @@ import React from 'react'
 
 function Subscribe() {
   return (
-    <div className='Subscribe'>
+    <div className='Subscribe move'>
         <div className='itemS'>
         <div className='title'> 
         <div id='sale'>SALE 20% OFF ALL STORE</div>

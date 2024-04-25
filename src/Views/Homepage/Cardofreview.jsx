@@ -3,7 +3,7 @@ import React from 'react'
 
 function Cardofreview() {
   return (
-    <div className='Cardofreview'>
+    <div className='Cardofreview move'>
     <div className='profile'>
       <div className='logo'><img id='img' src="https://shofy-grocery.botble.com/storage/main/users/3.jpg" alt="" /></div>
       <div className='info'>

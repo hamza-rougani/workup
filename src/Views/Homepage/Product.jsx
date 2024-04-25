@@ -5,7 +5,7 @@ function Product(e) {
         document.body.classList.add('AddtocartAc')
     }
   return (
-    <div className='Product'>
+    <div className='Product move'>
     <div className='image'>
         <img id='img' src={e.data.image} alt="" />
       <button onClick={()=>handelopenwindow()} className='addto mobilevisible'><i class='bx bx-shopping-bag'></i>Add to card</button>

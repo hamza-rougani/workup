@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
     const collections = ['Carrot','Banana','Strawberry','Mango','Ice Cream','Fruits']
   return (
-    <div className='Footer'>
+    <div className='Footer move'>
         <div className='top'>
         <div className='introSite'>
             <div className='largeLogo'>

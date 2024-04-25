@@ -10,6 +10,7 @@ import ScrollUp from '../Components/ScrollUp'
 import SlideMenu from '../Components/SlideMenu'
 import SlideSearch from '../Components/SearchMobile/SlideSearch'
 import AddToCart from '../Components/AddToCart'
+import AnimationItems from '../Components/Animation/AnimationItems'
 
 function Guest_Layout() {
 
@@ -24,6 +25,7 @@ function Guest_Layout() {
         <SlideMenu/>
         <SlideSearch/>
         <AddToCart/>
+        <AnimationItems/>
         <Footer/>
     </div>
   )
