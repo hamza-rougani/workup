@@ -7,6 +7,7 @@ import Introduct from './Introduct'
 import Footer from '../../Components/Footer'
 import Guides from './Guides'
 import SwiperAuto from '../../Components/Swipers/SwiperAuto'
+import Cardofreviews from './Cardofreviews'
 
 function Homepage() {
   return (
@@ -16,6 +17,7 @@ function Homepage() {
         <div className='containerHome'>
         <Products/>
         <Reviews/>
+        <Cardofreviews/>
         <Guides/>
         </div>
     </div>

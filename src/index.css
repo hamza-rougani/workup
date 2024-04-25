@@ -24,6 +24,7 @@ body{
   --background1:#181c2c; /* Default color */
   --backgroundP:#214343;
   --sumibackground:#d8e6d1;
+  --yellow:#d4ae0d;
   ; /* Default color */
 }
 #submitbtn{
@@ -1017,11 +1018,11 @@ border-radius: 6px 0px 0px 6px;
 }
 .Header .search button{
 padding: 0px;
-border: 2px solid #2d2b2b;
+border: 2px solid var(--yellow);
 outline: none;
 font-size: 1.2rem;
 /* background: linear-gradient(to right,#619e01,#72b709,#7ac30c); */
-background: #2d2b2b;
+background: var(--yellow);
 color: #fff;
 width: 50px;
 
@@ -1479,7 +1480,7 @@ justify-content: center;
 font-size: 1.3em;
 }
 .Homepage .Guides ul li i{
-color: var(--colorp);
+color: var(--backgroundP);
 }
 .Homepage .Guides ul #li{
 
@@ -2003,7 +2004,7 @@ justify-content: space-between;
 .IntroductMobile .shopnow{
  padding: 15px 20px;
  box-sizing: border-box;
- background-color: var(--colorp);
+ background-color: var(--backgroundP);
  color: #fff;
  border:none;
  border-radius:20px;
@@ -2023,7 +2024,7 @@ margin-top: 10px;
   padding: 10px;
   width: 100%;
   border: none;
-  background: black;
+  background: var(--backgroundP);
   color: #fff;
   display: flex;
   align-items: center;
@@ -2184,13 +2185,122 @@ body.AddtocartAc .AddToCart{
   background-color: #fff;
   border-radius: 10px;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 20px;
   transform: translateY(-20px);
   transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y:scroll ;
+ 
+}
+.AddToCart .containerAdd::-webkit-scrollbar{
+  display: none;
+}
+.AddToCart .containerAdd .choose{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+
+}
+.AddToCart .containerAdd .choose #addto{
+padding: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: none;
+color: #000000;
+gap: 10px;
+border: 1px solid #000000b0;
+font-size: 0.8rem;
+cursor: pointer;
+transition: 0.2s;
+}
+.AddToCart .containerAdd .choose #addto:hover{
+  background: var(--backgroundP);
+  color: #fff;
+}
+.AddToCart .containerAdd  .showdetail:hover{
+  background: var(--backgroundP);
+  color: #fff;
+}
+.AddToCart .containerAdd .choose #addto i{
+  font-size: 1rem;
+  cursor: pointer;
+}
+.AddToCart .containerAdd .choose .qte {
+ display: flex;
+ align-items: center;
+}
+.AddToCart .containerAdd .choose .qte .qt{
+width: 30px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+border: none;
+cursor: pointer;
+}
+.AddToCart .containerAdd .choose .qte .qt .conQte{
+display: flex;
+flex-direction: column;
+}
+.AddToCart .containerAdd .secC{
+font-size: 0.9rem;
+}
+.AddToCart .containerAdd .instock{
+color: rgb(11, 156, 11);
+}
+.AddToCart .containerAdd .showdetail{
+padding: 10px;
+border: none;
+width: max-content;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+}
+.AddToCart .containerAdd .choose .qte span{
+width: 30px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.AddToCart .containerAdd .bellow{
+  box-sizing: border-box;
+  padding: 0px 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 body.AddtocartAc .containerAdd{
   transform: translateY(0px);
 }
+.AddToCart .chooseimages{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+.AddToCart .chooseimages .img{
+  width: 40%;
+}
+.AddToCart .bellow .name{
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+.AddToCart .bellow .name span{
+ font-weight: bold;
+ font-size: 1.2rem;
+
+}
+
 .AddToCart .containerAdd {
 display: flex;
 flex-direction: column;
@@ -2203,7 +2313,6 @@ justify-content: end;
 }
 .AddToCart .containerAdd .headAdd #btn{
 border: none;
-padding: 10px;
 font-size: 1.3rem;
 background: none;
 cursor: pointer;
@@ -2318,6 +2427,47 @@ color: #fff;
 .Login .background .cop h2{
   padding: 0;
   margin: 0;
+}
+.Cardofreviews{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+.Cardofreviews .Cardofreview{
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+ border: 1px solid #00000051;
+ box-sizing: border-box;
+ padding: 20px;
+ border-radius: 20px;
+}
+.Cardofreviews .Cardofreview #name{
+font-weight: bold;
+}
+.Cardofreviews .Cardofreview #desc{
+font-size: 0.8rem;
+color: #0000008d;
+}
+.Cardofreviews .Cardofreview .reviewsC i{
+color:#fcb444;
+}
+.Cardofreviews .profile{
+ display: flex;
+ gap: 10px;
+ align-items: center;
+}
+.Cardofreviews .profile .info{
+ display: flex;
+ flex-direction: column;
+ font-size: 0.8rem;
+
+}
+.Cardofreviews .profile .logo{
+width: 60px;
+height: 60px;
+border-radius: 50%;
+overflow: hidden;
 }
 /* Media query for screens smaller than 600px */
 @media screen and (max-width: 600px) {
@@ -2504,6 +2654,19 @@ display: none;
         }
         .Login .background{
           display: none;
+          }
+          .AddToCart .containerAdd .bellow{
+  
+            padding: 0px 20px;
+
+          }
+          .AddToCart .chooseimages .img{
+            width: 50%;
+          }
+          .Cardofreviews{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            gap: 20px;
           }
 }
 
