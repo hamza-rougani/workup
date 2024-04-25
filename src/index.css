@@ -1134,6 +1134,28 @@ color: #fcb444
   padding: 20px;
  
 }
+ .CardSearchProduct {
+  display: flex;
+  gap: 30px;
+}
+ .CardSearchProduct .image{
+ width: 20%;
+}
+ .CardSearchProduct .info{
+font-size: 0.9rem;
+}
+ .CardSearchProduct .reviews{
+display: flex;
+gap: 10px;
+
+}
+ .CardSearchProduct .reviews .review{
+color: #fcb444
+}
+ .CardSearchProduct .reviews{
+display: flex;
+gap: 10px;
+}
 .Homepage .Product .Side{
 position: absolute;
 left: 0;
@@ -2045,6 +2067,16 @@ body.SlideSearchAc .SlideSearch{
   height: 100%;
   padding: 20px 20px;
 }
+ .SlideSearch .reasultsearch ul{
+margin: 0;
+padding: 0;
+list-style: none;
+
+}
+ .SlideSearch .reasultsearch ul li{
+padding: 10px;
+box-sizing: border-box;
+}
 /* Media query for screens smaller than 600px */
 @media screen and (max-width: 600px) {
 .Topheader{
@@ -2068,9 +2100,18 @@ display: none;
 .Header .ul{
   gap: 10px;
 }
-.Subscribe{
-  display: none;
-}
+.Subscribe .itemS{
+  flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+    align-items: start;
+    padding:  30px 20px;
+    
+  }
+  .Subscribe .subs{
+    display: flex;
+    width: 100%;
+    }
 .Header .mobilehidden{
 display: none;
 }

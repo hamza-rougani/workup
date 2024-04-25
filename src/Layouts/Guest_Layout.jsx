@@ -8,7 +8,7 @@ import { useEffect, useRef } from 'preact/hooks'
 import Subscribe from '../Views/Homepage/Subscribe'
 import ScrollUp from '../Components/ScrollUp'
 import SlideMenu from '../Components/SlideMenu'
-import SlideSearch from '../Components/SlideSearch'
+import SlideSearch from '../Components/SearchMobile/SlideSearch'
 
 function Guest_Layout() {
 
