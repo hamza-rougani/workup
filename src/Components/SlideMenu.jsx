@@ -13,11 +13,10 @@ function SlideMenu() {
             <button onClick={()=>handelSlideMenu()} className='close'><i class='bx bx-x'></i></button>
         </div>
         <ul className='ulmenu'>
-            <Link id='linkl' to='/'><li className='limenu'><i class='bx bx-home' ></i> Home</li></Link>
-            <Link id='linkl' to='/'><li className='limenu'><i class='bx bx-shopping-bag' ></i> Shopping Cart</li></Link>
-            <Link id='linkl' to='/blogs'><li className='limenu'><i class='bx bxl-blogger' ></i> Blog</li></Link>
-            <Link id='linkl' to='/contact'><li className='limenu'><i class='bx bx-phone'></i> Contact</li></Link>
-
+            <Link id='linkl' to='/'><li onClick={()=>handelSlideMenu()} className='limenu'><i class='bx bx-home' ></i> Home</li></Link>
+            <Link id='linkl' to='/'><li onClick={()=>handelSlideMenu()} className='limenu'><i class='bx bx-shopping-bag' ></i> Shopping Cart</li></Link>
+            <Link id='linkl' to='/blogs'><li onClick={()=>handelSlideMenu()} className='limenu'><i class='bx bxl-blogger' ></i> Blog</li></Link>
+            <Link id='linkl' to='/contact'><li onClick={()=>handelSlideMenu()} className='limenu'><i class='bx bx-phone'></i> Contact</li></Link>
         </ul>
         </div>
         <div className='more'>

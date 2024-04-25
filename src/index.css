@@ -1656,12 +1656,13 @@ outline: none;
   align-items: center;
   justify-content: center;
 
+
 }
 .ContainerBlogs .SideBlog .aboutbloger .des{
 width: 80%;
 font-size: 0.8em;
 text-align: center;
-margin-top: 6px;
+margin-top: 10px;
 }
 
 .ContainerBlogs .SideBlog .aboutbloger #job{
@@ -1669,8 +1670,8 @@ font-size: 0.8em;
 color: #868282;
 }
 .ContainerBlogs .SideBlog .aboutbloger .pic{
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -2127,6 +2128,7 @@ display: none;
      }
      .ContainerBlogs .ContainerB .Blogs{
       grid-template-columns: repeat(1,1fr);
+      gap: 30px;
      }
      .ContainerBlogs  .Categories ul{
       font-size: 1rem;
@@ -2135,6 +2137,10 @@ display: none;
       padding: 10px;
       box-sizing: border-box;
      }
+     .ContainerBlogs .SideBlog .searchblog{
+      display: none;
+     }
+
      .Contact{
       padding: 20px 20px;
     }
