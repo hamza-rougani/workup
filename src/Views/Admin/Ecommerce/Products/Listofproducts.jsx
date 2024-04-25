@@ -21,6 +21,10 @@ function Listofproducts() {
                     <td>Stock</td>
                     <td>Quantity</td>
                     <td>SKU</td>
+                    <td className='lang'>
+                    <div className='iconlarge'><img id='img' src={`${import.meta.env.VITE_BASE_URL}/Icons/france.png`} alt="" /></div>
+                    <div className='iconlarge'><img id='img' src={`${import.meta.env.VITE_BASE_URL}/Icons/arabic.png`} alt="" /></div>
+                    </td>
                     <td>Action</td>
                 </thead>
                 

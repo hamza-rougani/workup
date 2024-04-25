@@ -9,6 +9,7 @@ import Subscribe from '../Views/Homepage/Subscribe'
 import ScrollUp from '../Components/ScrollUp'
 import SlideMenu from '../Components/SlideMenu'
 import SlideSearch from '../Components/SearchMobile/SlideSearch'
+import AddToCart from '../Components/AddToCart'
 
 function Guest_Layout() {
 
@@ -22,6 +23,7 @@ function Guest_Layout() {
         <ScrollUp/>
         <SlideMenu/>
         <SlideSearch/>
+        <AddToCart/>
         <Footer/>
     </div>
   )

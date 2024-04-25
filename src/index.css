@@ -21,6 +21,10 @@ body{
   --colorp: #678e61 ; /* Default color */
   --opacity:rgb(153, 160, 153) ; /* Default color */
   --opacity-border:rgba(195, 197, 195, 0.721); /* Default color */
+  --background1:#181c2c; /* Default color */
+  --backgroundP:#214343;
+  --sumibackground:#d8e6d1;
+  ; /* Default color */
 }
 #submitbtn{
   padding: 10px 15px;
@@ -64,6 +68,10 @@ body{
 .icons{
   width: 15px;
 }
+.iconlarge{
+  width: 20px;
+  height: 20px;
+}
 #linkd{
   color:#ffffffd0 ;
   text-decoration: none;
@@ -77,6 +85,9 @@ width: 100px;
 }
 .largeLogo{
 width: 200px;
+}
+.largeLogo .inputs{
+width: 100%;
 }
 #small_image{
 width: 50px;
@@ -353,7 +364,21 @@ color: rgb(10, 222, 10);
   padding: 10px;
   box-sizing: border-box;
 }
-.listofproduct table td button{
+.listofproduct table .lang{
+display: flex;
+gap: 10px;
+align-items: center;
+justify-content: center;
+}
+.listofproduct table .lang button{
+font-size: 1rem;
+width: 30px;
+height: 30px;
+}
+.listofproduct table #check{
+color: rgb(68, 201, 68);
+}
+.listofproduct table td .btn{
 border: none;
 color: #fff;
 width: 30px;
@@ -366,11 +391,15 @@ cursor: pointer;
   display: flex;
   gap: 10px;
 }
-.listofproduct table td #edit{
+.listofproduct .lang button{
+border:none;
+
+}
+.listofproduct table td .edit{
   background-color: #0f83dc;
 }
 
-.listofproduct table td #delete{
+.listofproduct table td .delete{
   background-color: #ce4611;
 }
 .Createproduct .Destination span{
@@ -930,7 +959,7 @@ font-size: 0.9rem;
 
 /* header  */
 .Header{
-  background: var(--colorp) ;
+  background: var(--backgroundP) ;
   box-sizing: border-box;
   padding: 15px 20px;
   color: #fff;
@@ -1003,36 +1032,42 @@ transform: translateY(3px);
 .Introduct{
   width: 100%;
   height: 90vh;
-  background: #f3f3f3  ;
+  background: var(--sumibackground)  ;
   box-sizing: border-box;
   padding: 60px;
   display: flex;
+  color: var(--backgroundP);
   gap: 40px;
 }
 .Introduct .infoI{
 display: flex;
 flex-direction: column;
 width: 50%;
+color: var(--backgroundP);
 }
 .Introduct .infoI h1{
  font-size: 4em;
  padding: 0;
  margin: 0;
  line-height: 70px;
- color: #454343;
+ color: var(--backgroundP);
+}
+.Introduct .infoI .headI{
+color: var(--backgroundP);
 }
 .Introduct .infoI .sub{
 font-weight: bold;
-
+color: var(--backgroundP);
 }
 .Introduct .infoI #shop{
 padding: 13px 20px;
 width: max-content;
-background: var(--colorp);
+background: var(--backgroundP);
 color: #fff;
 border: none;
 border-radius: 20px;
-font-size: 1em;
+font-size: 0.9em;
+box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
 }
 .Introduct .Image{
 width: 50%;
@@ -1098,8 +1133,28 @@ padding: 20px;
 border-radius: 10px;
 height: 70%;
 transition: 0.2s;
+position: relative;
 }
-
+.Homepage .Product .image .addto{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #aca9a943;
+ box-sizing: border-box;
+ gap: 10px;
+ align-items: center;
+ justify-content: center;
+font-weight: bold;
+color: #6c6b6b;
+cursor: pointer;
+display: none;
+}
+.Homepage .Product .image .addto i{
+  font-size: 1rem;
+}
 .Homepage .Product .info {
 box-sizing: border-box;
 padding: 6px 0px;
@@ -1181,9 +1236,13 @@ overflow: hidden;
   box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.05);
   font-size: 1.1em;
   color: #aeacac;
+  border: none;
+  cursor: pointer;
 
 }
-
+.Homepage .Product .Side .cara:hover{
+  color: #000000;
+}
 .swiper {
   width: 100%;
   height: 100%;
@@ -1379,7 +1438,7 @@ font-size: 1em;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background: var(--colorp);
+  background: var(--backgroundP);
   color: #ffffffa7;
   box-sizing: border-box;
   padding: 20px;
@@ -1759,7 +1818,7 @@ color: #868282;
 
 .Subscribe{
   width: 100%;
-  background: var(--colorp);
+  background: var(--backgroundP);
   box-sizing: border-box;
   color: #fff;
   position: relative;
@@ -1931,10 +1990,31 @@ justify-content: space-between;
 .mySwiper{
   margin-top: 80px;
 }
-.slideiamge{
+.IntroductMobile{
   width: 100%;
   height: 400px;
   max-height: 500px;
+  position: relative;
+}
+.slideiamge{
+  width: 100%;
+  height: 100%;
+}
+.IntroductMobile .shopnow{
+ padding: 15px 20px;
+ box-sizing: border-box;
+ background-color: var(--colorp);
+ color: #fff;
+ border:none;
+ border-radius:20px;
+ box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+}
+.IntroductMobile .shopce{
+ position: absolute;
+ bottom: 40px;
+ display: flex;
+ justify-content: center;
+ width: 100%;
 }
 .placeorder {
 margin-top: 10px;
@@ -2076,6 +2156,168 @@ list-style: none;
  .SlideSearch .reasultsearch ul li{
 padding: 10px;
 box-sizing: border-box;
+}
+
+.AddToCart{
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #00000078;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events:none;
+  opacity: 0;
+  transition: 0.2s;
+}
+body.AddtocartAc .AddToCart{
+  pointer-events:auto;
+  opacity: 1;
+}
+
+
+.AddToCart .containerAdd{
+  width: 40%;
+  height: 80%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  transform: translateY(-20px);
+  transition: 0.3s;
+}
+body.AddtocartAc .containerAdd{
+  transform: translateY(0px);
+}
+.AddToCart .containerAdd {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+.AddToCart .containerAdd .headAdd{
+width: 100%;
+display: flex;
+justify-content: end;
+}
+.AddToCart .containerAdd .headAdd #btn{
+border: none;
+padding: 10px;
+font-size: 1.3rem;
+background: none;
+cursor: pointer;
+}
+.Login{
+  display: grid;
+  grid-template-columns: 30% 70%;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  
+}
+.Login .loginform{
+background: var(--background1);
+display: flex;
+align-items: center;
+justify-content: center;
+color: #fff;
+  
+}
+.Login .loginform .conatinerform{
+height: 70%;  
+width: 80%;
+display: flex;
+flex-direction: column;
+gap: 10px;
+align-items: center;
+}
+.Login .loginform .conatinerform .forgetpass{
+display: flex;
+justify-content: space-between;
+
+}
+.Login .loginform .conatinerform .head{
+display: flex;
+gap: 10px;
+}
+.Login .loginform .conatinerform .check{
+display: flex;
+gap: 10px;
+}
+.Login .loginform .conatinerform .inputs{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 0.8rem;
+}
+.Login .loginform .conatinerform .inputs input{
+padding: 10px;
+background: var(--background1);
+border: 1px solid green;
+}
+.Login .loginform .conatinerform .inputs input:focus{
+  outline:1px solid #0f83dc;
+}
+.Login .loginform .conatinerform .inputs #sign{
+padding: 10px;
+background: #0b63a7;
+border: none;
+color: #fff;
+cursor: pointer;
+display: flex;
+align-items: center;
+gap: 7px;
+justify-content: center;
+}
+.Login .loginform .conatinerform .inputs input::placeholder{
+  color: #8297a2;
+}
+.Login .loginform .conatinerform .inputs #imp{
+color: red;
+}
+
+.Login .loginform #below{
+width: 100%;
+text-align: center;
+}
+.Login .background{
+height: 100vh;
+width: 100%;
+position: relative;
+}
+.Login .row{
+display:flex;
+flex-direction: column;
+gap: 10px;
+color: #ffffffce;
+
+}
+
+.Login .background .backimage{
+height: 100%;
+}
+
+.Login .background .copy{
+position: absolute;
+bottom:10px;
+color: #fff;
+width: 100%;
+height: 100%;
+background-color: #0000007f;
+}
+.Login .background .cop{
+position: absolute;
+bottom:10px;
+right: 20px;
+color: #fff;
+
+}
+.Login .background .cop h2{
+  padding: 0;
+  margin: 0;
 }
 /* Media query for screens smaller than 600px */
 @media screen and (max-width: 600px) {
@@ -2241,5 +2483,27 @@ display: none;
         padding:30px 0px;
 
         }
+        .Homepage .Product .image .addto{
+          display: flex;
+        }
+        .AddToCart .containerAdd{
+          width: 90%;
+          height: 80%;
+          background-color: #fff;
+          border-radius: 10px;
+          box-sizing: border-box;
+          padding: 10px;
+          transform: translateY(-20px);
+          transition: 0.3s;
+        }
+        .Login{
+
+          grid-template-columns: 100%;
+
+          
+        }
+        .Login .background{
+          display: none;
+          }
 }
 

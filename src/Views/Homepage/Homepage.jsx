@@ -14,7 +14,6 @@ function Homepage() {
         <Introduct/>
         <SwiperAuto/>
         <div className='containerHome'>
-        
         <Products/>
         <Reviews/>
         <Guides/>

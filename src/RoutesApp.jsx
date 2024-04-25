@@ -11,6 +11,7 @@ import Homepage from './Views/Homepage/Homepage'
 import ContainerBlogs from './Views/Blogs/ContainerBlogs'
 import Contact from './Views/Contact/Contact'
 import Scrolltop from './Components/Scrolltop'
+import Login from './Views/User/Login'
 const trackingCode = 'G-28WQ3FGMYE'
 ReactGa.initialize(trackingCode)
 function RoutesApp() {
@@ -25,7 +26,11 @@ function RoutesApp() {
             <Route path='/products' element={<SingleProduct/>}/>
             <Route path='/blogs' element={<ContainerBlogs/>}/>
             <Route path='/contact' element={<Contact/>}/>
+           
         </Route>
+         <Route path='/login' element={<Login/>}/>
+
+  
         {/* space of super admin */}
         <Route path='/' element={<Admin_Layout/>}>
             <Route path='/admin' element={<Dashboard/>}/>

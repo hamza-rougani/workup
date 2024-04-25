@@ -1,10 +1,15 @@
 import React from 'react'
 
-function Product() {
+function Product(e) {
+    const handelopenwindow = ()=>{
+        document.body.classList.add('AddtocartAc')
+    }
   return (
     <div className='Product'>
     <div className='image'>
-        <img id='img' src="https://mrmnutrition.com/cdn/shop/files/13010_Calcium_D3_Gummy__2302V1_FRONT_7514fc43-19ce-4012-8b13-5d74e05869d8.png?v=1683708878&width=533" alt="" />
+        <img id='img' src={e.data.image} alt="" />
+      <button onClick={()=>handelopenwindow()} className='addto mobilevisible'><i class='bx bx-shopping-bag'></i>Add to card</button>
+
     </div>
     <div className='info'>
         <span>Categorie</span>
@@ -21,12 +26,12 @@ function Product() {
         </div>
         <div className='price'>1200.00 dh</div>
         <div className='placeorder mobilevisible'>
-            <button id='btn'><i class='bx bx-shopping-bag'></i> Add to cart</button>
+            <button id='btn'><i class='bx bx-show-alt'></i>Show Product</button>
         </div>
     </div>
     <div className='Side'>
-        <div className='cara'><i class='bx bx-shopping-bag'></i></div>
-        <div className='cara'><i class='bx bx-chevron-right'></i></div>
+        <button className='cara' onClick={()=>handelopenwindow()}><i class='bx bx-shopping-bag'></i></button>
+        <button className='cara'><i class='bx bx-show-alt'></i></button>
     </div>
 </div>
   )
