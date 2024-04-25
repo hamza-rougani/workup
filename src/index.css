@@ -48,7 +48,7 @@ body{
 #scrollupbtn:hover{
   background-color: var(--hover2-color);
 }
-#menuHeader{
+.menuHeader{
   padding: 5px;
   font-size: 1.2rem;
   border: none;
@@ -1424,7 +1424,7 @@ float: right;
 box-sizing: border-box;
 padding: 20px 0px;
 overflow: hidden;
-transition: 0.2s;
+transition: 0.3s;
 }
 body.shoppingAc .Shopping {
 width: 100%;
@@ -1930,6 +1930,80 @@ margin-top: 10px;
 .mobilevisible{
   display: none;
 }
+
+.SlideMenu{
+  position: fixed;
+  height: 100%;
+  top: 0px;
+  background: #fff;
+  z-index: 999;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 20px 0px;
+  width: 0px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+body.SlideMenuac .SlideMenu{
+  width: 100%;
+  padding: 20px 20px;
+}
+.SlideMenu .topmenu{
+display: flex;
+flex-direction: column;
+gap: 50px;
+}
+.SlideMenu .topmenu .limenu{
+display: flex;
+align-items: center;
+gap: 10px;
+padding:15px 10px;
+box-sizing: border-box;
+border-bottom:1px solid var(--opacity-border);
+}
+.SlideMenu  .more{
+  width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.SlideMenu  .more button{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: none;
+}
+.SlideMenu  .more button i{
+  font-size: 1rem;
+}
+.SlideMenu .headerMenu{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.SlideMenu .headerMenu .close{
+width: 30px;
+height: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+border: none;
+background: #e9e5e5af;
+font-size: 1.5rem;
+}
+.SlideMenu .ulmenu{
+list-style: none;
+margin: 0;
+padding: 0;
+}
+.SlideMenu .logol{
+width: 20px;
+}
+
 /* Media query for screens smaller than 600px */
 @media screen and (max-width: 600px) {
 .Topheader{
@@ -1990,22 +2064,35 @@ display: none;
     gap: 30px;
     width: 80%;
   }
+  .Homepage .Guides{
+    margin-top: 30px;
+  
+    }
   .Homepage .Guides ul{
-
-    grid-template-columns: repeat(1,1fr);
    padding: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+  
     }
     .Homepage .Guides ul #li{
-    align-items: center;
+    
       border-bottom:1px solid #908b8b7c;
       border-right:none;
+
       
       
       }
     .Homepage .Guides ul li{
-      justify-content: start;
-      padding:10px 34px;
+      justify-content: space-between;
+      align-items: center;
+      width: 60%;
+      padding:15px 10px;
       
+      
+    }
+    .Footer {
+      margin-top: 10px;
     }
     .Footer  ul{
       box-sizing: border-box;
@@ -2025,5 +2112,43 @@ display: none;
       width: 100%;
      
     }
+
+
+    /* blogs */
+    .ContainerBlogs{
+      padding: 20px 20px;
+      font-size: 1.2rem;
+      /* topfromhedaer */
+      margin-top: 80px;
+
+    }
+    .ContainerBlogs .ContainerB{
+      grid-template-columns: 100%;
+     }
+     .ContainerBlogs .ContainerB .Blogs{
+      grid-template-columns: repeat(1,1fr);
+     }
+     .ContainerBlogs  .Categories ul{
+      font-size: 1rem;
+     }
+     .ContainerBlogs  .Categories ul li{
+      padding: 10px;
+      box-sizing: border-box;
+     }
+     .Contact{
+      padding: 20px 20px;
+    }
+    .Contact .contact-items{
+      grid-template-columns: 100%;
+    }
+    .Contact .contact-items .form .horizontal{
+      grid-template-columns: repeat(1,1fr);
+      
+      }
+      .Contact .contact-items .info {
+
+        padding:30px 0px;
+
+        }
 }
 

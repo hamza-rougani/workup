@@ -24,13 +24,17 @@ function Header() {
     const handelSlideCategories = ()=>{
         document.body.classList.add('SlideCategoriesac')
     }
+    const handelSlideMenu = ()=>{
+        document.body.classList.add('SlideMenuac')
+    }
   
     
   return (
     <div className='Header'>
         
         <div className='part'>
-        <button ref={Refbtn} onClick={()=>{handelSlideCategories()}} id='menuHeader'><i class='bx bx-menu' ></i><SlideCategories/></button>
+        <button ref={Refbtn} onClick={()=>{handelSlideCategories()}} className='menuHeader mobilehidden'><i class='bx bx-menu' ></i><SlideCategories/></button>
+        <button ref={Refbtn} onClick={()=>{handelSlideMenu()}} className='menuHeader mobilevisible'><i class='bx bx-menu' ></i><SlideCategories/></button>
         <Link id='linkd' to='/'>
         <div className='logowebsite'>
             <img id='img' src={`${import.meta.env.VITE_BASE_URL}/Images/logooff.png`} alt="" />

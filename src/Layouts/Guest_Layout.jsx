@@ -7,6 +7,7 @@ import Shopping from '../Views/Homepage/Shopping'
 import { useEffect, useRef } from 'preact/hooks'
 import Subscribe from '../Views/Homepage/Subscribe'
 import ScrollUp from '../Components/ScrollUp'
+import SlideMenu from '../Components/SlideMenu'
 
 function Guest_Layout() {
 
@@ -18,6 +19,7 @@ function Guest_Layout() {
         <Outlet/>
         <Subscribe/>
         <ScrollUp/>
+        <SlideMenu/>
         <Footer/>
     </div>
   )
