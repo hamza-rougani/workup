@@ -21,6 +21,10 @@ function Products() {
         <h2 className='best mobilehidden'>{t("products.BestProducts")}</h2> 
         <div className='containerProducts'>
        {products.map((p,index)=><Product data={p} key={index}/>)}
+       
+       </div>
+       <div className='imgside'>
+        <img id='img' src={`${import.meta.env.VITE_BASE_URL}/Images/pic.jpg`} alt="" />
        </div>
     </div>
   )

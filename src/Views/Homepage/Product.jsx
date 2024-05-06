@@ -40,9 +40,9 @@ const navigate = useNavigate()
 }
        
         </div>
-        <span>(20) {t("products.review")}</span>
+        <span>{e.data.reviews} {t("products.review")}</span>
         </div>
-        <div className='price'>1200.00 {t("products.dh")}</div>
+        <div className='price'>{e.data.price}  {t("products.dh")}</div>
         <div className='placeorder mobilevisible'>
        <button onClick={()=>navigate(`/products/${e.data.slug}`)} id='btn'><i class='bx bx-show-alt'></i>{t("products.showprd")}</button>
         </div>
