@@ -1,24 +1,19 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 function Subscribe() {
+  const {t} = useTranslation()
   return (
     <div className='Subscribe move'>
         <div className='itemS'>
         <div className='title'> 
-        <div id='sale'>SALE 20% OFF ALL STORE</div>
-       <div id='sub'>Subscribe our Newsletter</div>
+        <div id='sale'>{t("sub.off")}</div>
+       <div id='sub'>{t("sub.subsc")}</div>
         </div>
         <div className='subs'>
-            <input placeholder='Enter your number phone' type="text" />
-            <button>Subscribe</button>
+            <input placeholder={t("sub.phone")} type="text" />
+            <button>{t("sub.do")}</button>
         </div>
-        </div>
-
-            <div className='img1'>
-                <img id='img' src={`${import.meta.env.VITE_BASE_URL}/Images/cta-shape-1.png`} alt="" />
-            </div>
-            <div className='img1'>
-                <img id='img' src={`${import.meta.env.VITE_BASE_URL}/Images/cta-shape-1.png`} alt="" />
         </div>
     </div>
   )

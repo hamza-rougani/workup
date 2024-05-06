@@ -1,37 +1,55 @@
+import { useEffect, useState } from 'preact/hooks'
 import React from 'react'
+import { set } from 'react-ga'
+import { useTranslation } from 'react-i18next'
+import { useStateContext } from '../../Context/Provider'
+import { Link, useNavigate } from 'react-router-dom'
 
 function Product(e) {
+    const {setaddtocart} = useStateContext()
     const handelopenwindow = ()=>{
+        setaddtocart(JSON.stringify(e.data))
         document.body.classList.add('AddtocartAc')
     }
+
+    const {t} = useTranslation()
+const navigate = useNavigate()
   return (
     <div className='Product move'>
     <div className='image'>
         <img id='img' src={e.data.image} alt="" />
-      <button onClick={()=>handelopenwindow()} className='addto mobilevisible'><i class='bx bx-shopping-bag'></i>Add to card</button>
+      <button onClick={()=>handelopenwindow()} className='addto mobilevisible'><i class='bx bx-shopping-bag'></i>{t("products.addtocart")}</button>
 
     </div>
     <div className='info'>
-        <span>Categorie</span>
-        <div className='title'>Whole Wheat Pasta</div>
+        <span>{e.data.category}</span>
+        <div className='title'>{e.data.title}</div>
         <div className='reviews'>
-            <div className='review'>
-            <i class='bx bxs-star' ></i>
-            <i class='bx bxs-star' ></i>
-            <i class='bx bxs-star' ></i>
-            <i class='bx bxs-star' ></i>
-            <i class='bx bxs-star' ></i>
+        
+            <div className='review' style={{direction:'rtl'}}>
+              
+            {
+    Array(5-e.data.rating).fill().map((_, index) => (
+        <i key={index} class='bx bx-star' ></i>
+    ))
+}
+            {
+    Array(e.data.rating).fill().map((_, index) => (
+        <i key={index} className='bx bxs-star'></i>
+    ))
+}
+       
         </div>
-        <span>(20) reviews</span>
+        <span>(20) {t("products.review")}</span>
         </div>
-        <div className='price'>1200.00 dh</div>
+        <div className='price'>1200.00 {t("products.dh")}</div>
         <div className='placeorder mobilevisible'>
-            <button id='btn'><i class='bx bx-show-alt'></i>Show Product</button>
+       <button onClick={()=>navigate(`/products/${e.data.slug}`)} id='btn'><i class='bx bx-show-alt'></i>{t("products.showprd")}</button>
         </div>
     </div>
     <div className='Side'>
-        <button className='cara' onClick={()=>handelopenwindow()}><i class='bx bx-shopping-bag'></i></button>
-        <button className='cara'><i class='bx bx-show-alt'></i></button>
+        {/* <button className='cara' onClick={()=>handelopenwindow()}><i class='bx bx-shopping-bag'></i></button> */}
+        <button onClick={()=>navigate(`/products/${e.data.slug}`)} className='cara'><i class='bx bx-show-alt'></i></button>
     </div>
 </div>
   )

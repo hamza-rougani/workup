@@ -1,16 +1,20 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 function Footer() {
-    const collections = ['Carrot','Banana','Strawberry','Mango','Ice Cream','Fruits']
+    const {t} = useTranslation()
   return (
-    <div className='Footer move'>
+    <div className='Footer'>
+        {/* <div className='footerimage'> 
+        <img src={`${import.meta.env.VITE_BASE_URL}/Images/C837cs.jpg`} alt="" />
+        </div> */}
         <div className='top'>
         <div className='introSite'>
-            <div className='largeLogo'>
-                <img id='img' src={`${import.meta.env.VITE_BASE_URL}/Images/logooff.png`} alt="" />
+            <div className='Logoblack'>
+                <img  src={`${import.meta.env.VITE_BASE_URL}/Images/logo-noiir-.png`} alt="" />
             </div>
             <div className='desc'>
-            Shofy is a powerful tool eCommerce Laravel script for creating a professional and visually appealing online store.
+            {t("footer.desc")}
             </div>
             <div className='allmedia'>
                  <div className='media'><i class='bx bxl-facebook'></i></div>
@@ -20,59 +24,29 @@ function Footer() {
             </div>
         </div>
         <ul id='ul'>
-            <li id='p'><h2>My Account</h2></li>
-             <li id='li'>Track Orders</li> 
-             <li id='li'>Shipping</li>
-             <li id='li'>Wishlist</li>
-             <li id='li'>Order History</li>
-             <li id='li'>Returns</li>
+            <li id='p'><h2>{t("footer.Guides")}</h2></li>
+             <li id='li'>{t("footer.Exchange")}</li> 
+             <li id='li'>{t("footer.Privacypolicy")}</li>
+             <li id='li'>{t("footer.UserTerms")}</li>
+             <li id='li'>{t("footer.Guides")}</li>
+             <li id='li'>{t("footer.Contactus")}</li>
 
         </ul>
-        <ul id='ul'>
-            <li id='p'><h2>Information</h2></li>
-             <li id='li'>Track Orders</li> 
-             <li id='li'>Shipping</li>
-             <li id='li'>Wishlist</li>
-             <li id='li'>Order History</li>
-             <li id='li'>Returns</li>
-
-        </ul>
-        <ul id='ul'>
-            <li id='p'><h2>Talk To Us</h2></li>
-             <li id='li'>Track Orders</li> 
-             <li id='li'>Shipping</li>
-             <li id='li'>Wishlist</li>
-             <li id='li'>Order History</li>
-             <li id='li'>Returns</li>
-
-        </ul>
-</div>
-<div className='categoriescollections'>
-    <div className='collection'>
-        <span>Fruits :</span>
-        <ul>
-            {collections.map((c,index)=><li key={index}>{c}</li>)}
-        </ul>
-    </div>
-    <div className='collection'>
-        <span>Sweet Treats : </span>
-        <ul>
-            {collections.map((c,index)=><li key={index}>{c}</li>)}
-        </ul>
-    </div>
-    <div className='collection'>
-        <span>Fashion : </span>
-        <ul>
-            {collections.map((c,index)=><li key={index}>{c}</li>)}
-        </ul>
-    </div>
+        
 </div>
 <div className='copyright'>
-    <span>© 2024 All Rights Reserved.</span>
+    <span>{t("copyrightinfo.copyright")}</span>
     <ul>
-       <li><i class='bx bx-credit-card'></i> Cash on delivery</li> 
-       <li><i class='bx bx-money-withdraw' ></i> MAD</li> 
-       <li><i class='bx bx-globe'></i> FR (Francais)</li> 
+       <li><i class='bx bx-credit-card'></i>{t("copyrightinfo.cash")}</li> 
+       <li><i class='bx bx-money-withdraw' ></i> {t("copyrightinfo.dh")}</li> 
+       <li>
+       {localStorage.getItem('lan') ? 
+            <div className='logol logoll'><img id='img' src={`${import.meta.env.VITE_BASE_URL}/Icons/france.png`} alt="" /></div>
+            : 
+            <div className='logol logoll'><img id='img' src={`${import.meta.env.VITE_BASE_URL}/Icons/morocco.png`} alt="" /></div>
+
+            }
+        {t("copyrightinfo.language")}</li> 
     </ul>
 </div>
     </div>

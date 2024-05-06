@@ -1,0 +1,91 @@
+
+{
+  "language": "Langue",
+  "category": "Catégorie",
+  "homepage":"Page d'accueil",
+  "languages": {
+  "ar": "Arabe",
+  "en": "Anglais",
+  "fr": "Français"
+  },
+  "welcome": {
+  "subtitle": "Prenez soin de vous maintenant",
+  "title": "Bienvenue sur la plateforme Vitamine",
+  "shopnow": "Achetez maintenant",
+  "desc": "Faites de l'exercice pendant 30 minutes chaque jour. Définissez des objectifs quotidiens de santé que vous souhaitez atteindre."
+  },
+  "header": {
+  "home": "Accueil",
+  "contactus": "Contactez-nous"
+  },
+  "products": {
+  "BestProducts": "Meilleurs produits",
+  "title": "Vitamine très saine",
+  "category": "Vitamine",
+  "review": "Avis",
+  "dh": "Dirham",
+  "showprd": "Afficher le produit",
+  "addtocart": "Ajouter au panier",
+  "Quantity": "Quantité",
+  "InStock": "En stock",
+  "details": "Voir les détails complets",
+  "cat": "Catégorie"
+  },
+  "guides": {
+  "FlexibleDelivery": "Livraison flexible",
+  "backmoney": "Remboursement à 100%",
+  "SecurePayment": "Paiement sécurisé",
+  "HourSupport": "Support 24 heures sur 24"
+  },
+  "reviews": {
+  "CustomerReviews": "Avis des clients",
+  "happey": "Nos clients heureux",
+  "name": "HAMZA ROUGANI",
+  "desc": "Client de Facebook",
+  "review": "Nous vous remercions pour tous vos efforts et votre travail d'équipe au cours des derniers mois ! Merci beaucoup."
+  },
+  
+    "copyrightinfo": {
+        "copyright": "Droits d'auteur 2024 © The Vitamine Store. Tous droits réservés. C'est une marque déposée fiable, récompenses santé.",
+        "cash": "Paiement à la livraison",
+        "dh": "Dirham",
+        "language": "française"
+    },
+    "footer": {
+        "AboutMe": "À propos de moi",
+        "Services": "Services",
+        "Shippinghandling": "Expédition et manutention",
+        "Paymentmethods": "Méthodes de paiement",
+        "Printing": "Impression personnalisée sur vêtements",
+        "Terms": "Conditions générales",
+        "UserTerms": "Conditions d'utilisation",
+        "Exchange": "Politique d'échange et de retour",
+        "Privacypolicy": "Politique de confidentialité",
+        "Contactus": "Contactez-nous",
+        "SendMessage": "Envoyer un message",
+        "Guides": "Guides",
+        "desc": "Chez The Vitamine Store, nous sommes fiers de proposer une variété de produits alimentaires sains et naturels qui renforcent votre santé et votre bien-être. Nous nous engageons à respecter les normes les plus élevées en matière de qualité et de sécurité, et nos produits sont préparés dans des laboratoires agréés par la Food and Drug Administration américaine (FDA), l'Office national de sécurité sanitaire et l'ISO européenne."
+    },
+    "sub": {
+        "off": "20% de réduction sur tous les produits",
+        "subsc": "Abonnez-vous à notre newsletter",
+        "do": "S'abonner",
+        "phone": "Entrez votre numéro de téléphone"
+    },
+    "shopping":{
+      "emptycart": "Votre panier est vide",
+      "gotoshop": "Aller à la boutique",
+      "shoppingcart": "Panier d'achat"
+  }, 
+  "specialoffer": {
+    "sp": "Special Offer: Get 20% off on all vitamins this week!"
+},
+"menuhome": {
+  "home": "Accueil",
+  "contactus": "Contactez-nous",
+  "language": "Langue",
+  "dh": "Dirham"
+}
+}
+
+  

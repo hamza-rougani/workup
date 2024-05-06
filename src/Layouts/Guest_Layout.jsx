@@ -11,20 +11,26 @@ import SlideMenu from '../Components/SlideMenu'
 import SlideSearch from '../Components/SearchMobile/SlideSearch'
 import AddToCart from '../Components/AddToCart'
 import AnimationItems from '../Components/Animation/AnimationItems'
-
+import { useStateContext } from '../Context/Provider'
+import Notifications from '../Components/Notifications/Notifications'
+import Whatsapp from '../Components/Whatsapp'
 function Guest_Layout() {
-
+const {notification} = useStateContext()
   return (
     <div className='Guest'>
         <Topheader/>
         <Header/>
         <Shopping />
         <Outlet/>
+        {
+        notification ? <Notifications field={notification}/>:""
+        }
         <Subscribe/>
         <ScrollUp/>
         <SlideMenu/>
         <SlideSearch/>
         <AddToCart/>
+        <Whatsapp/>
         <AnimationItems/>
         <Footer/>
     </div>

@@ -1,11 +1,13 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
-function IntroductMobile() {
+function IntroductMobile({image}) {
+  const {t} = useTranslation()
   return (
     <div className='IntroductMobile'>
-        <div className='slideiamge'><img id='img' src="https://resize.prod.docfr.doc-media.fr/s/1200/ext/eac4ff34/content/2022/7/5/vitamine-e-3a576ddd9bf3b661.jpeg" alt="" /></div>
+        <div className='slideiamge'><img id='img' src={image} alt="" /></div>
         <div className='shopce'>
-        <button className='shopnow'>Shop Now</button>
+        <a href='#shopsection' id='linkl'><button className='shopnow'>{t("welcome.shopnow")}</button></a>
         </div>
     </div>
   )

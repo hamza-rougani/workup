@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import { mobilesilder } from '../../Admin/Welcome/welcomeImages';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -29,9 +29,9 @@ export default function SwiperAuto() {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper mobilevisible"
       >
-        <SwiperSlide><IntroductMobile/></SwiperSlide>
-        <SwiperSlide><IntroductMobile/></SwiperSlide>
-        <SwiperSlide><IntroductMobile/></SwiperSlide>
+        {mobilesilder.map((image,index)=><SwiperSlide key={index}><IntroductMobile image={image}/></SwiperSlide>)}
+        
+        
       </Swiper>
     </>
   );

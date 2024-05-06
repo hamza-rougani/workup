@@ -1,43 +1,36 @@
 import React from 'react'
 import {Routes,Route} from 'react-router-dom'
-import Admin_Layout from './Layouts/Admin_Layout'
-import Dashboard from './Views/Admin/Dashboard'
 import Guest_Layout from './Layouts/Guest_Layout'
 import SingleProduct from './Views/ProductPage/SingleProduct'
 import ReactGa from 'react-ga'
-import Products from './Views/Admin/Ecommerce/Products/Products'
-import Createproduct from './Views/Admin/Ecommerce/Products/Createproduct'
 import Homepage from './Views/Homepage/Homepage'
-import ContainerBlogs from './Views/Blogs/ContainerBlogs'
 import Contact from './Views/Contact/Contact'
 import Scrolltop from './Components/Scrolltop'
-import Login from './Views/User/Login'
+import Product_Layout from './Layouts/Product_Layout'
+import Messages_Layout from './Layouts/Messages_layout'
+import Notfound from './Components/Messagespages/Notfound'
+import Thankspage from './Components/Messagespages/Thankspage'
+import Error from './Components/Messagespages/Error'
 const trackingCode = 'G-28WQ3FGMYE'
 ReactGa.initialize(trackingCode)
 function RoutesApp() {
   return (
     <>
     <Scrolltop />
-   
     <Routes>
       {/* space of guest */}
       <Route path='/' element={<Guest_Layout/>}>
             <Route path='/' element={<Homepage/>}/>
-            <Route path='/products' element={<SingleProduct/>}/>
-            <Route path='/blogs' element={<ContainerBlogs/>}/>
             <Route path='/contact' element={<Contact/>}/>
-           
         </Route>
-         <Route path='/login' element={<Login/>}/>
-
-  
-        {/* space of super admin */}
-        <Route path='/' element={<Admin_Layout/>}>
-            <Route path='/admin' element={<Dashboard/>}/>
-            <Route path='/admin/ecommerce/products' element={<Products/>}/>
-            <Route path='/admin/ecommerce/products/create' element={<Createproduct/>}/>
+      <Route path='/' element={<Product_Layout/>}>
+            <Route path='/products/:slug' element={<SingleProduct/>}/>
         </Route>
-        {/* space of admin */}
+      <Route path='/' element={<Messages_Layout/>}>
+            <Route path='/thank_you' element={<Thankspage/>}/>
+            <Route path='/error' element={<Error/>}/>
+        </Route>
+        <Route path='*' element={<Notfound />} />
     </Routes>
     </>
   )

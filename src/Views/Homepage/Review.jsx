@@ -1,26 +1,36 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
-function Review() {
+function Review(e) {
+  const {t} = useTranslation()
   return (
     <div className='ReviewT'>
         <div className='logoR'>
             <div className='ic'><i class='bx bx-check-double'></i></div>
             <div className='logo'>
-            <img id='img' src="https://shofy-grocery.botble.com/storage/main/users/3.jpg" alt="" />
+            <img id='img' src={e.review.image} alt="" />
         </div>
         </div>
         <div className='contentR'>
-            <div className='starC'>
-            <i class='bx bx-star'></i>
-            <i class='bx bx-star'></i>
-            <i class='bx bx-star'></i>
-            <i class='bx bx-star'></i>
-            <i class='bx bx-star'></i>
+            <div className='starC'  >
+            <div className='startsrl' style={{direction:'rtl'}}>
+            {
+    Array(5-e.review.rating).fill().map((_, index) => (
+        <i key={index} class='bx bx-star' ></i>
+    ))
+}
+            {
+    Array(e.review.rating).fill().map((_, index) => (
+        <i key={index} className='bx bxs-star'></i>
+    ))
+}
+       
+</div>
             </div>
-            <div id='p'> I'd be happy to help. However, could you please specify which specific vitamin product you're interested in</div>
+            <div id='p'>{e.review.comment}</div>
              <div className='name'>
-                <b>HAMZA ROUGANI</b>
-                <span>Developer</span>
+                <b>{e.review.fullname}</b>
+                <span>{e.review.roll}</span>
              </div>
         </div>
     </div>
